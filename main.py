@@ -54,13 +54,11 @@ def spam_call(message):
                 response2 = requests.get(
                     f'https://spamwhats.vercel.app/send_spam?number={phone_number}')
                 if response2.status_code == 200:
-                    message = f"Whats Message made to {
-                        phone_number} successfully!"
+                    message = f"Whats Message made to {phone_number} successfully!"
                     bot.send_message(chat_id, message, parse_mode="HTML")
 
                 else:
-                    message = f"Failed to make Whats Message to {
-                        phone_number}. Status code: {response2.status_code}"
+                    message = f"Failed to make Whats Message to {phone_number}. Status code: {response2.status_code}"
                     bot.send_message(chat_id, message, parse_mode="HTML")
 
             except requests.exceptions.RequestException as e:
