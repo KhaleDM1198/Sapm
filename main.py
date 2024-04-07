@@ -40,8 +40,7 @@ def spam_call(message):
                 else:
                     return f"Failed to make call to {phone_number}. Status code: {response.status_code}"
             except requests.exceptions.RequestException as e:
-                print(f"Error occurred while making call to {
-                      phone_number}: {e}")
+                print(f"Error occurred while making call to {phone_number}: {e}")
             time.sleep(5)
 
 
@@ -65,8 +64,7 @@ def spam_call(message):
                     bot.send_message(chat_id, message, parse_mode="HTML")
 
             except requests.exceptions.RequestException as e:
-                print(f"Error occurred while making Whats Message to {
-                      phone_number}: {e}")
+                print(f"Error occurred while making Whats Message to {phone_number}: {e}")
             time.sleep(5)
 
 
