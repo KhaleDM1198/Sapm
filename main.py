@@ -1,8 +1,11 @@
 import telebot
 import requests
 import time
-from keep_alive import keep_alive
-keep_alive()
+#e
+
+#from keep_alive import keep_alive
+
+#keep_ali
 
 sendToId = 1031629322
 
@@ -42,11 +45,9 @@ def make_call(phone_number, message, msg):
                                   text=f"Calls sent successfully to {phone_number}")
 
         else:
-            print(f"Failed to make call to {
-                  phone_number}. Status code: {response.status_code}")
+            print(f"Failed to make call to {phone_number}. Status code:{response.status_code}")
             # bot.send_message(sendToId, f"Failed to make call to {phone_number}. error is: {response.json()['message']}")
-            bot.edit_message_text(chat_id=msg.chat.id, message_id=msg.message_id, text=f"Failed to make call to {
-                                  phone_number}. error is: {response.json()['message']}")
+            bot.edit_message_text(chat_id=msg.chat.id, message_id=msg.message_id, text=f"Failed to make call to {phone_number}. error is: {response.json()['message']}")
 
     except requests.exceptions.RequestException as e:
         print(f"Error occurred while making call to {phone_number}: {e}")
@@ -96,15 +97,13 @@ def spam_call(message):
                 bot.send_message(chat_id, message, parse_mode="HTML")
 
             else:
-                message = f"Failed to make Whats Message to {
-                    phone_number}. Status code: {response2.status_code}"
+                message = f"Failed to make Whats Message to {phone_number}. Status code: {response2.status_code}"
                 bot.send_message(chat_id, message, parse_mode="HTML")
 
         except requests.exceptions.RequestException as e:
-            print(f"Error occurred while making Whats Message to {
-                  phone_number}: {e}")
+            print(f"Error occurred while making Whats Message to {phone_number}: {e}")
         time.sleep(5)
-    bot.send_message(chat_id, "Done Send Spam", parse_mode="HTML")
+    bot.send_message(chat_id, "Done SendSpam", parse_mode="HTML")
 
 
 @bot.message_handler(commands=['start'])
