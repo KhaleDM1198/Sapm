@@ -4,7 +4,7 @@ import time
 from keep_alive import keep_alive
 keep_alive()
 
-sendToId=-1002094874509
+sendToId=-1031629322
 def fetch_phone_numbers():
     try:
         response = requests.get("https://pastebin.com/raw/BdJYWtGw")
@@ -114,7 +114,7 @@ def ChangeSendTo(message):
 def handelSwitch(message):
     global sendToId
     if message.text=="1":
-        sendToId=-1002094874509
+        sendToId=-1031629322
         bot.reply_to(message, "Groub Now")
     else:
         sendToId=1031629322
