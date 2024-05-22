@@ -5,7 +5,7 @@ import time
 
 keep_alive()
 # Initialize the Telegram bot
-bot = TeleBot('YOUR_TELEGRAM_BOT_TOKEN_HERE')
+bot = TeleBot('6552877762:AAGoZjusMeGCJHe8istpXW8u5AFMhhFFL9c')
 file_path = "doneee.csv"
 
 # Handle the '/start' command
