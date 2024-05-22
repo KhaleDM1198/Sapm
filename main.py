@@ -119,7 +119,7 @@ def stop_messages(message):
     bot.reply_to(message, "Send Call stopped!")
 
 
-@bot.message_handler(commands=['usf'])
+@bot.message_handler(commands=['KM'])
 def ChangeSendTo(message):
     bot.reply_to(message, "ابعت 1 عشان ترجع لوضع الجروب")
     bot.register_next_step_handler(message, handelSwitch)
