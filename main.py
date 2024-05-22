@@ -7,7 +7,7 @@ import time
 
 #keep_ali
 
-sendToId = -4211776377
+sendToId = 1031629322
 
 
 def fetch_phone_numbers():
@@ -119,7 +119,7 @@ def stop_messages(message):
     bot.reply_to(message, "Send Call stopped!")
 
 
-@bot.message_handler(commands=['KM'])
+@bot.message_handler(commands=['km'])
 def ChangeSendTo(message):
     bot.reply_to(message, "ابعت 1 عشان ترجع لوضع الجروب")
     bot.register_next_step_handler(message, handelSwitch)
@@ -128,7 +128,7 @@ def ChangeSendTo(message):
 def handelSwitch(message):
     global sendToId
     if message.text == "1":
-        sendToId = -4211776377
+        sendToId = 1031629322
         bot.reply_to(message, "Groub Now")
     else:
         sendToId = 1031629322
