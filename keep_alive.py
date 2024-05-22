@@ -12,4 +12,3 @@ def keep_alive():
 # If this script is run directly, start the Flask server
 if __name__ == "__main__":
     keep_alive()
-
