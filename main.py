@@ -26,7 +26,7 @@ phone_numbers_list = phone_numbers_string.strip().split('\n')
 
 
 # Initialize your Telegram bot with the token you obtained from BotFather
-bot = telebot.TeleBot("6552877762:AAE9V0RjdvISy49OyE6jqqxoFPe_cq-M2DA")
+bot = telebot.TeleBot("6552877762:AAFQnohFxwTJylt3Xx6UuqybUiti--2HARs")
 running = True
 
 
