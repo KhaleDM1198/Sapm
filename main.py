@@ -41,7 +41,7 @@ def spam_call(message):
         try:
             response = requests.post(CALL_URL, json=payload)
             if response.status_code == 200:
-                success_message = f"{phone_number} successfully"
+                success_message = f"Call made to {phone_number} successfully"
                 bot.send_message(chat_id, success_message, parse_mode="HTML")
             else:
                 error_message = f"Failed{phone_number}. Status code: {response.status_code}"
@@ -49,7 +49,7 @@ def spam_call(message):
         except requests.exceptions.RequestException as e:
             error_message = f"Error occurred while making call to {phone_number}: {e}"
             bot.send_message(chat_id, error_message, parse_mode="HTML")
-        time.sleep(1)
+        time.sleep(5)
         
 # Handle the '/spammsg' command
 @bot.message_handler(commands=['spammsg'])
@@ -65,7 +65,7 @@ def spam_message(message):
         try:
             response2 = requests.get(f'{MSG_URL}send_spam?number={phone_number}')
             if response2.status_code == 200:
-                success_message = f"{phone_number} Successfully!"
+                success_message = f"Message sent to {phone_number} successfully"
                 bot.send_message(chat_id, success_message,parse_mode="HTML")
             else:
                 error_message = f"Failed {phone_number}. Status code: {response2.status_code}"
