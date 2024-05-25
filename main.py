@@ -49,7 +49,7 @@ def spam_call(message):
         except requests.exceptions.RequestException as e:
             error_message = f"Error occurred while making call to {phone_number}: {e}"
             bot.send_message(chat_id, error_message, parse_mode="HTML")
-        time.sleep(5)
+        time.sleep(3)
         
 # Handle the '/spammsg' command
 @bot.message_handler(commands=['spammsg'])
